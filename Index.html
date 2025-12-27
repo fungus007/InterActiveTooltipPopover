@@ -1,0 +1,422 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery InterActiveTooltipPopover Demo</title>
+	<link rel="stylesheet" href="css/InterActiveTooltipPopover.css">
+	<style>
+		body {
+			font-family: 'Segoe UI', Arial, sans-serif;
+			background: #f7f8fa;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 32px 16px;
+		}
+		h1, h2 {
+			text-align: center;
+			margin-bottom: 24px;
+		}
+		.card-grid {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 32px 24px;
+			justify-content: space-between;
+		}
+		.tooltip-card {
+			background: #fff;
+			border-radius: 16px;
+			box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+			flex: 1 1 calc(33.333% - 24px);
+			min-width: 320px;
+			max-width: 420px;
+			margin-bottom: 32px;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+		}
+		.tooltip-card-header {
+			padding: 20px 24px 8px 24px;
+			font-size: 1.2rem;
+			font-weight: 600;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.tooltip-demo-row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 16px;
+			padding: 24px 0 12px 0;
+		}
+		.tooltip-demo-btn {
+			margin: 8px;
+			padding: 10px 18px;
+			border-radius: 8px;
+			border: none;
+			background: #e9e9ef;
+			color: #222;
+			font-size: 1rem;
+			cursor: pointer;
+			position: relative;
+		}
+		.card-code-block {
+			background: #23272e;
+			color: #e6e6e6;
+			font-size: 0.95em;
+			border-radius: 0 0 16px 16px;
+			padding: 16px 20px;
+			overflow-x: auto;
+			font-family: 'Fira Mono', 'Consolas', monospace;
+		}
+		@media (max-width: 1100px) {
+			.card-grid {
+				flex-direction: column;
+				gap: 32px 0;
+			}
+			.tooltip-card {
+				max-width: 100%;
+				min-width: 0;
+			}
+		}
+	</style>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="js/InterActiveTooltipPopover.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>jQuery InterActiveTooltipPopover Demo</h1>
+		<h2>13 Interactive Tooltip Cards (Styles & Animations)</h2>
+		<div class="card-grid">
+			<!-- Classic Light -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Classic Light</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Top" data-tooltip-style="classic-light" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Right" data-tooltip-style="classic-light" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Bottom" data-tooltip-style="classic-light" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Left" data-tooltip-style="classic-light" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Top Left" data-tooltip-style="classic-light" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Top Right" data-tooltip-style="classic-light" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Bottom Left" data-tooltip-style="classic-light" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Classic Light - Bottom Right" data-tooltip-style="classic-light" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Classic Light - Top"<br>
+						data-tooltip-style="classic-light"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Dark Mode -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Dark Mode</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Top" data-tooltip-style="dark-mode" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Right" data-tooltip-style="dark-mode" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Bottom" data-tooltip-style="dark-mode" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Left" data-tooltip-style="dark-mode" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Top Left" data-tooltip-style="dark-mode" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Top Right" data-tooltip-style="dark-mode" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Bottom Left" data-tooltip-style="dark-mode" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Dark Mode - Bottom Right" data-tooltip-style="dark-mode" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Dark Mode - Top"<br>
+						data-tooltip-style="dark-mode"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Gradient Glow -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Gradient Glow</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Top" data-tooltip-style="gradient-glow" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Right" data-tooltip-style="gradient-glow" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Bottom" data-tooltip-style="gradient-glow" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Left" data-tooltip-style="gradient-glow" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Top Left" data-tooltip-style="gradient-glow" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Top Right" data-tooltip-style="gradient-glow" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Bottom Left" data-tooltip-style="gradient-glow" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Gradient Glow - Bottom Right" data-tooltip-style="gradient-glow" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Gradient Glow - Top"<br>
+						data-tooltip-style="gradient-glow"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Minimal Line -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Minimal Line</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Top" data-tooltip-style="minimal-line" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Right" data-tooltip-style="minimal-line" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Bottom" data-tooltip-style="minimal-line" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Left" data-tooltip-style="minimal-line" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Top Left" data-tooltip-style="minimal-line" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Top Right" data-tooltip-style="minimal-line" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Bottom Left" data-tooltip-style="minimal-line" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Minimal Line - Bottom Right" data-tooltip-style="minimal-line" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Minimal Line - Top"<br>
+						data-tooltip-style="minimal-line"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Rounded Bubble -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Rounded Bubble</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Top" data-tooltip-style="rounded-bubble" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Right" data-tooltip-style="rounded-bubble" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Bottom" data-tooltip-style="rounded-bubble" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Left" data-tooltip-style="rounded-bubble" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Top Left" data-tooltip-style="rounded-bubble" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Top Right" data-tooltip-style="rounded-bubble" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Bottom Left" data-tooltip-style="rounded-bubble" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Rounded Bubble - Bottom Right" data-tooltip-style="rounded-bubble" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Rounded Bubble - Top"<br>
+						data-tooltip-style="rounded-bubble"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Card Style -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Card Style</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Top" data-tooltip-style="card-style" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Right" data-tooltip-style="card-style" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Bottom" data-tooltip-style="card-style" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Left" data-tooltip-style="card-style" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Top Left" data-tooltip-style="card-style" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Top Right" data-tooltip-style="card-style" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Bottom Left" data-tooltip-style="card-style" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Card Style - Bottom Right" data-tooltip-style="card-style" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Card Style - Top"<br>
+						data-tooltip-style="card-style"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Glassmorphism -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Glassmorphism</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Top" data-tooltip-style="glassmorphism" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Right" data-tooltip-style="glassmorphism" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Bottom" data-tooltip-style="glassmorphism" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Left" data-tooltip-style="glassmorphism" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Top Left" data-tooltip-style="glassmorphism" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Top Right" data-tooltip-style="glassmorphism" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Bottom Left" data-tooltip-style="glassmorphism" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Glassmorphism - Bottom Right" data-tooltip-style="glassmorphism" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Glassmorphism - Top"<br>
+						data-tooltip-style="glassmorphism"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- 3D Shadow -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">3D Shadow</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Top" data-tooltip-style="shadow-3d" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Right" data-tooltip-style="shadow-3d" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Bottom" data-tooltip-style="shadow-3d" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Left" data-tooltip-style="shadow-3d" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Top Left" data-tooltip-style="shadow-3d" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Top Right" data-tooltip-style="shadow-3d" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Bottom Left" data-tooltip-style="shadow-3d" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="3D Shadow - Bottom Right" data-tooltip-style="shadow-3d" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="3D Shadow - Top"<br>
+						data-tooltip-style="shadow-3d"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Animated Border -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Animated Border</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Top" data-tooltip-style="animated-border" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Right" data-tooltip-style="animated-border" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Bottom" data-tooltip-style="animated-border" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Left" data-tooltip-style="animated-border" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Top Left" data-tooltip-style="animated-border" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Top Right" data-tooltip-style="animated-border" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Bottom Left" data-tooltip-style="animated-border" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Animated Border - Bottom Right" data-tooltip-style="animated-border" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Animated Border - Top"<br>
+						data-tooltip-style="animated-border"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+		</div>
+		<h2>Animated & Effect Tooltip Styles</h2>
+		<div class="card-grid">
+			<!-- Fade-In / Fade-Out -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Fade-In / Fade-Out</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Top" data-tooltip-style="fade-in" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Right" data-tooltip-style="fade-in" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Bottom" data-tooltip-style="fade-in" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Left" data-tooltip-style="fade-in" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Top Left" data-tooltip-style="fade-in" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Top Right" data-tooltip-style="fade-in" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Bottom Left" data-tooltip-style="fade-in" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Fade-In - Bottom Right" data-tooltip-style="fade-in" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Fade-In - Top"<br>
+						data-tooltip-style="fade-in"<br>
+						data-tooltip-direction="top"<br>
+						data-tooltip-mouse-follow <span style="color:#6c6">(optional)</span><br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Slide-Up / Slide-Down -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Slide-Up / Slide-Down</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Top" data-tooltip-style="slide-up" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Right" data-tooltip-style="slide-up" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Bottom" data-tooltip-style="slide-up" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Left" data-tooltip-style="slide-up" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Top Left" data-tooltip-style="slide-up" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Top Right" data-tooltip-style="slide-up" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Bottom Left" data-tooltip-style="slide-up" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Slide-Up - Bottom Right" data-tooltip-style="slide-up" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Slide-Up - Top"<br>
+						data-tooltip-style="slide-up"<br>
+						data-tooltip-direction="top"<br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Bounce Effect -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Bounce Effect</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Top" data-tooltip-style="bounce" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Right" data-tooltip-style="bounce" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Bottom" data-tooltip-style="bounce" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Left" data-tooltip-style="bounce" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Top Left" data-tooltip-style="bounce" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Top Right" data-tooltip-style="bounce" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Bottom Left" data-tooltip-style="bounce" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Bounce - Bottom Right" data-tooltip-style="bounce" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Bounce - Top"<br>
+						data-tooltip-style="bounce"<br>
+						data-tooltip-direction="top"<br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Zoom-In -->
+			<div class="tooltip-card">
+				<div class="tooltip-card-header">Zoom-In</div>
+				<div class="tooltip-demo-row">
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Top" data-tooltip-style="zoom-in" data-tooltip-direction="top">Top</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Right" data-tooltip-style="zoom-in" data-tooltip-direction="right">Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Bottom" data-tooltip-style="zoom-in" data-tooltip-direction="bottom">Bottom</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Left" data-tooltip-style="zoom-in" data-tooltip-direction="left">Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Top Left" data-tooltip-style="zoom-in" data-tooltip-direction="top-left">Top-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Top Right" data-tooltip-style="zoom-in" data-tooltip-direction="top-right">Top-Right</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Bottom Left" data-tooltip-style="zoom-in" data-tooltip-direction="bottom-left">Bottom-Left</button>
+					<button class="tooltip-demo-btn" data-tooltip="Zoom-In - Bottom Right" data-tooltip-style="zoom-in" data-tooltip-direction="bottom-right">Bottom-Right</button>
+				</div>
+				<div class="card-code-block">
+					&lt;button <br>
+						data-tooltip="Zoom-In - Top"<br>
+						data-tooltip-style="zoom-in"<br>
+						data-tooltip-direction="top"<br>
+					&gt;Top&lt;/button&gt;
+				</div>
+			</div>
+			<!-- Add more animated styles as needed -->
+		</div>
+	</div>
+<footer style="margin:48px auto 0 auto;max-width:900px;padding:32px 24px 24px 24px;background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.07);font-size:1.08rem;line-height:1.7;">
+	<div style="display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
+		<span style="background:#222;color:#fff;font-size:1.1rem;font-weight:700;padding:4px 18px;border-radius:8px;letter-spacing:1px;margin-right:12px;">DOCUMENTATION</span>
+		<h2 style="display:inline;margin:0;font-size:1.35rem;font-weight:600;vertical-align:middle;">InterActiveTooltipPopover Plugin</h2>
+	</div>
+	<p><strong>Author:</strong> fungus007</p>
+	<h3>Overview</h3>
+	<p>
+		InterActiveTooltipPopover is a modern, highly customizable jQuery tooltip & popover plugin. It supports 13+ unique styles, advanced animations, smart positioning, accessibility, and theming. Easily integrate with any project using simple data attributes or the jQuery API.
+	</p>
+	<h3>Quick Start</h3>
+	<ol>
+		<li>Include <b>jQuery</b>, <b>InterActiveTooltipPopover.js</b>, and <b>InterActiveTooltipPopover.css</b> in your page.</li>
+		<li>Add <code>data-tooltip</code> and <code>data-tooltip-style</code> to any element.</li>
+		<li>Optionally use <code>data-tooltip-direction</code>, <code>data-tooltip-theme</code>, etc. for more control.</li>
+		<li>Initialize via jQuery if needed: <br><code>$('.your-selector').InterActiveTooltipPopover(options);</code></li>
+	</ol>
+	<h3>Key Features</h3>
+	<ul>
+		<li>13+ unique tooltip styles & animations</li>
+		<li>Sticky, interactive, and HTML content support</li>
+		<li>Customizable arrows, smart auto-flip, mouse-follow</li>
+		<li>Keyboard navigation & ARIA accessibility</li>
+		<li>Custom themes, branding, and dark mode</li>
+		<li>jQuery API and data-attribute configuration</li>
+	</ul>
+	<h3>Report Bugs & Feedback</h3>
+	<p>
+		If you find any bug or issue in the plugin, please inform the author (<b>fungus007</b>) via GitHub Issues or the contact method provided in the repository. Your feedback is valuable for making this plugin better!
+	</p>
+	<h3>Contribute & Suggest Improvements</h3>
+	<p>
+		Have an idea to enhance or improve the plugin? Suggestions for new features, performance, or usability are always welcome! Please open an issue or pull request on the repository.
+	</p>
+	<h3>License</h3>
+	<p>This plugin is open-source and free to use under the MIT License.</p>
+</footer>
+</body>
+</html>
