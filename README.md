@@ -9,8 +9,11 @@ A modern, highly customizable jQuery tooltip & popover plugin with 13+ unique st
 
 ---
 
+
 ## Demo
-See the included `Index.html` for a full-featured demo and usage examples.
+- [Live Demo (GitHub Pages)](https://fungus007.github.io/InterActiveTooltipPopover/)
+- [Live Demo (Netlify)](https://super-twilight-930fc6.netlify.app/)
+See the included `index.html` for a full-featured demo and usage examples.
 
 ---
 
