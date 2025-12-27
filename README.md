@@ -1,3 +1,8 @@
+
+# About
+
+InterActiveTooltipPopover is a modern, fully customizable jQuery tooltip & popover plugin designed for professional web projects. It empowers developers to add visually stunning, highly interactive, and accessible tooltips or popovers with ease. The plugin features 13+ unique styles, advanced animations, smart positioning, theming, and full ARIA accessibility support. Whether you need simple tooltips or advanced onboarding popovers, this plugin is built to deliver a seamless user experience.
+
 # InterActiveTooltipPopover
 
 A modern, highly customizable jQuery tooltip & popover plugin with 13+ unique styles, advanced animations, smart positioning, accessibility, and theming. Perfect for professional web projects.
